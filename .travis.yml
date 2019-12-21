@@ -22,7 +22,7 @@ after_success:
   #
   # take those images and push them into DockerHub
   #
-  - docker push kchuang8899/multi-client
-  - docker push kchuang8899/multi-nginx
-  - docker push kchuang8899/multi-server
-  - docker push kchuang8899/multi-worker
+  - docker push huang8899/multi-client
+  - docker push huang8899/multi-nginx
+  - docker push huang8899/multi-server
+  - docker push huang8899/multi-worker
