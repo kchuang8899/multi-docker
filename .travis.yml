@@ -15,13 +15,13 @@ after_success:
   - docker build -t kc/multi-nginx ./nginx
   - docker build -t kc/multi-server ./server
   - docker build -t kc/multi-worker ./worker
-
+  #
   # Log in to the docker CLI
-
+  #
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-
+  #
   # take those images and push them into DockerHub
-
+  #
   - docker push kc/multi-client
   - docker push kc/multi-nginx
   - docker push kc/multi-server
