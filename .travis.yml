@@ -3,18 +3,18 @@ services:
   - docker
 
 before_install:
-  - docker build -t kchuang8899/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t kc/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true kchuang8899/react-test npm run test -- --coverage
+  - docker run -e CI=true kc/react-test npm run test -- --coverage
 
 language: generic
 
 after_success:
-  - docker build -t kchuang8899/multi-client ./client
-  - docker build -t kchuang8899/multi-nginx ./nginx
-  - docker build -t kchuang8899/multi-server ./server
-  - docker build -t kchuang8899/multi-worker ./worker
+  - docker build -t kc/multi-client ./client
+  - docker build -t kc/multi-nginx ./nginx
+  - docker build -t kc/multi-server ./server
+  - docker build -t kc/multi-worker ./worker
   #
   # Log in to the docker CLI
   #
@@ -22,7 +22,7 @@ after_success:
   #
   # take those images and push them into DockerHub
   #
-  - docker push huang8899/multi-client
-  - docker push huang8899/multi-nginx
-  - docker push huang8899/multi-server
-  - docker push huang8899/multi-worker
+  - docker push kc/multi-client
+  - docker push kc/multi-nginx
+  - docker push kc/multi-server
+  - docker push kc/multi-worker
