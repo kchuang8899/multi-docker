@@ -5,19 +5,19 @@
       "name": "client",
       "image": "kc88998899889988/multi-client",
       "hostname": "client",
-      "essential": false,
+      "essential": false
     },
     {
       "name": "server",
       "image": "kc88998899889988/multi-server",
       "hostname": "api",
-      "essential": false,
+      "essential": false
     },
     {
       "name": "worker",
       "image": "kc88998899889988/multi-worker",
       "hostname": "worker",
-      "essential": false,
+      "essential": false
     },
     {
       "name": "nginx",
@@ -30,7 +30,7 @@
 	  "containerPort":80
 	}
       ],
-      "links": ["client", "server"],
+      "links": ["client", "server"]
     }
   ]
 }
